@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
   root "home#index"
-  resources :artists
+  
+  resources :artists do
+    resources :albums do 
+      resources :songs
+    end
+  end
 end

@@ -1,0 +1,3 @@
+class AlbumsController < ArtistsController
+  
+end
