@@ -1,0 +1,10 @@
+<div class="content__container">
+  <%= link_to "Add Artist", new_artist_path%>
+  <ul>
+  <% @artists.each do |a| %>
+    <li>
+      <%= a.name %> - - <%= link_to "Remove Artist", artist_path(a), :method => :get %>
+    </li>
+  <% end %>
+</ul>
+</div>

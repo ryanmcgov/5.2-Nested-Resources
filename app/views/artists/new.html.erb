@@ -1,0 +1,25 @@
+<% @title = "Add An Artist" %>
+
+<div class="content__container">
+  <h1>Add A New Artist</h1>
+
+  <%= form_for @artist do |a| %>
+    <% if @artist.errors.full_messages.present? %>
+      <ul>
+        <% @artist.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <div>
+      <%= a.label :name %>
+      <%= a.text_field :name %>
+    </div>
+    <div>
+      <%= a.submit "Add artist" %>
+      <%= link_to "Back To Artists", artists_path%>
+    </div>
+  <% end %>
+</div>
